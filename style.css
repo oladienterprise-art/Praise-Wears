@@ -26,7 +26,13 @@ body{
 
 .hero-content{
     color:white;
+    text-align:center;
+
+    margin-top:-150px;
+
     padding:20px;
+
+    max-width:800px;
 }
 
 .hero-content h1{
