@@ -1,9 +1,39 @@
 body{
-    background:white;
+    margin:0;
     font-family:Arial, sans-serif;
 }
 
-h1{
+.hero{
+    height:100vh;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.6)
+    ),
+    url("hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    margin-top:100px;
+}
+
+.hero-content{
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.3rem;
 }
