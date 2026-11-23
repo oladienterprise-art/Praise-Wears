@@ -1,15 +1,75 @@
-body{
+/* ==========================
+   RESET
+========================== */
+
+*{
     margin:0;
-    font-family:Arial, sans-serif;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f9f6f0;
+    color:#222;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(8px);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo{
+    color:white;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* ==========================
+   HERO
+========================== */
+
 .hero{
+
     height:100vh;
 
     background-image:
     linear-gradient(
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.6)
+        rgba(0,0,0,0.40),
+        rgba(0,0,0,0.65)
     ),
     url("hero.jpg");
 
@@ -25,21 +85,226 @@ body{
 }
 
 .hero-content{
-    color:white;
-    text-align:center;
 
-    margin-top:-150px;
+    max-width:900px;
+
+    color:white;
 
     padding:20px;
 
-    max-width:800px;
+    margin-top:-120px;
 }
 
-.hero-content h1{
+.hero h1{
+
+    font-family:'Playfair Display', serif;
+
     font-size:4rem;
-    margin-bottom:20px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
 }
 
-.hero-content p{
-    font-size:1.3rem;
+.hero p{
+
+    font-size:1.4rem;
+
+    margin-bottom:35px;
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:#C9A227;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:6px;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    background:#b79220;
+}
+
+/* ==========================
+   GENERAL
+========================== */
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+}
+
+h2{
+
+    font-family:'Playfair Display', serif;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#4A154B;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about{
+
+    padding:100px 0;
+
+    text-align:center;
+}
+
+.about p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:1.1rem;
+}
+
+/* ==========================
+   COLLECTIONS
+========================== */
+
+.collections{
+
+    padding:100px 0;
+
+    background:white;
+}
+
+.card-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.card{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-top:5px solid #C9A227;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3{
+
+    color:#6D0F1F;
+
+    margin-bottom:15px;
+}
+
+/* ==========================
+   HERITAGE
+========================== */
+
+.heritage{
+
+    padding:100px 0;
+
+    background:#6D0F1F;
+
+    color:white;
+}
+
+.heritage h2{
+
+    color:white;
+}
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.feature{
+
+    background:rgba(255,255,255,.1);
+
+    padding:30px;
+
+    text-align:center;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact{
+
+    padding:100px 0;
+
+    text-align:center;
+}
+
+.contact p{
+
+    margin-bottom:30px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    background:#111;
+
+    color:white;
+
+    padding:25px;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero-content{
+        margin-top:0;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
 }
